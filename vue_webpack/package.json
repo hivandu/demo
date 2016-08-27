@@ -1,0 +1,16 @@
+{
+  "name": "vue_webpack",
+  "version": "1.0.0",
+  "description": "vue + webpack 测试练习",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "vue",
+    "javascript"
+  ],
+  "author": "Hivan Du",
+  "license": "ISC"
+}
