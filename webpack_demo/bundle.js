@@ -1,3 +1,4 @@
+/*! This file is created by Hivan Du */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
