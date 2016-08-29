@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-show demo</title>
+  <style type="text/css" media="screen">
+    table tr td{
+      border:1px solid #333;
+      padding:10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>Hello Vue.js!</h1>
+    <table>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Age</td>
+          <td>Sex</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="person in people">
+          <td>{{person.name}}</td>
+          <td>{{person.age}}</td>
+          <td>{{person.sex}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+  var vm = new Vue({
+    el: '#app',
+    data:{
+      people:[{
+        name:'jack',
+        age: 30,
+        sex: 'Male'
+      },{
+        name: 'Bill',
+        age: 26,
+        sex: 'Female'
+      },{
+        name: 'Tracy',
+        age: 22,
+        sex: 'Female'
+      },{
+        name: 'Chris',
+        age: 36,
+        sex: 'Male'
+      }]
+    }
+  })
+</script>
+</html>
