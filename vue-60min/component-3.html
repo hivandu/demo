@@ -6,6 +6,7 @@
 </head>
 <body>
   <div id="app">
+<<<<<<< HEAD
     <!-- 3. #app是vue实例挂载的元素，应该再挂载元素范围内使用组件 -->
     <my-component></my-component>
   </div>
@@ -27,4 +28,31 @@
     })
   </script>
 </body>
+=======
+    <parent-component></parent-component>
+  </div>
+</body>
+<script src="vue.js"></script>
+<script>
+  var Child = Vue.extend({
+    template: '<p>This is a child component!</p>'
+  })
+
+  var Parent = Vue.extend({
+    // 在Parent组件中使用<child-component>标签
+    template: '<p>This is a Parent component</p><child-component></child-component>',
+    components: {
+      // 局部注册Child组件，该组件只能在Parent组件内使用
+      'child-component': Child
+    }
+  })
+
+  new Vue({
+    el: '#app',
+    components:{
+      'parent-component':Parent
+    }
+  })
+</script>
+>>>>>>> 6a0d10503cddff1ec80fc22f41a4d490b686a017
 </html>

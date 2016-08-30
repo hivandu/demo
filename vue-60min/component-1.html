@@ -5,6 +5,7 @@
   <title>component</title>
 </head>
 <body>
+<<<<<<< HEAD
   <div id="app">
     <!-- 3. #app是vue实例挂载的元素，应该再挂载元素范围内使用组件 -->
     <my-component></my-component>
@@ -23,4 +24,29 @@
     })
   </script>
 </body>
+=======
+  <div id="app1">
+    <!-- 3 #app 是vue实例挂载的元素，应该在挂载元素范围内使用组件 -->
+    <my-component></my-component>
+  </div>
+  <div id="app2">
+    <!-- 3 #app 是vue实例挂载的元素，应该在挂载元素范围内使用组件 -->
+    <my-component></my-component>
+  </div>
+</body>
+<script src="vue.js"></script>
+<script>
+  // 1 创建一个组件构造器
+  var myComponent = Vue.extend({
+    template: '<div>This is my first component!'
+  })
+
+  // 2 注册组件，并制定组件的标签
+  Vue.component('my-component', myComponent);
+
+  new Vue({
+    el: '#app1'
+  });
+</script>
+>>>>>>> 6a0d10503cddff1ec80fc22f41a4d490b686a017
 </html>

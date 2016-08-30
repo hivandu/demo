@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>component props</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <template id="myComponent">
+    <table>
+      <tr>
+        <th colspan="2">子组件数据</th>
+      </tr>
+      <tr>
+        <td>my name</td>
+        <td>{{ myName }}</td>
+      </tr>
+      <tr>
+        <td>my age</td>
+        <td>{{ myAge }}</td>
+      </tr>
+    </table>
+  </template>
+  <div id="app">
+    <my-component v-bind:my-name="name" v-bind:my-age="age"></my-component>
+  </div>
+</body>
+<script src="vue.js"></script>
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      name: 'hivandu',
+      age: 36
+    },
+    components: {
+      'my-component':{
+        template: '#myComponent',
+        props: ['myName', 'myAge']
+      }
+    }
+  })
+</script>
+</html>
