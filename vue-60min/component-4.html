@@ -6,6 +6,7 @@
 </head>
 <body>
   <div id="app">
+<<<<<<< HEAD
     <parent-component></parent-component>
   </div>
   <script type="text/javascript" src="vue.js"></script>
@@ -28,4 +29,21 @@
     })
   </script>
 </body>
+=======
+    <my-component></my-component>
+  </div>
+  <script type="text/x-template" id="myComponent">
+    <div>This is a component!</div>
+  </script>
+</body>
+<script src="vue.js"></script>
+<script>
+  Vue.component('my-component', {
+    template: '#myComponent'
+  })
+  new Vue({
+    el:'#app'
+  })
+</script>
+>>>>>>> 6a0d10503cddff1ec80fc22f41a4d490b686a017
 </html>
